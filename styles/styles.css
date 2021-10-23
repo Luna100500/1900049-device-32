@@ -2,7 +2,7 @@
   font-family: Rubik;
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/Rubik-400.woff.2") format("woff.2");
+  src: url("fonts/Rubik-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,21 +10,21 @@
   font-family: Rubik;
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/Rubik-700.woff.2") format("woff.2");
+  src: url("fonts/Rubik-700.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: Rubik;
   font-style: normal;
   font-weight: 800;
-  src: url("fonts/Rubik-800.woff.2") format("woff.2");
+  src: url("fonts/Rubik-800.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: Raleway;
   font-style: normal;
   font-weight: 800;
-  src: url("fonts/Raleway-800.woff.2") format("woff.2");
+  src: url("fonts/Raleway-800.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -199,7 +199,7 @@ body {
   line-height: 50px;
   color: #000000;
 }
-contacts-subtitle {
+.contacts-subtitle {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -211,7 +211,9 @@ contacts-subtitle {
   line-height: 20px;
   color: #000000;
 }
-address {
+.address,
+.contacts-adress,
+.contacts-phone {
   font-style: normal;
 }
 .contacts-phone {
@@ -245,7 +247,7 @@ h2.subscribe {
   height: 421px;
   background: #f0f0f0;
 }
-#placeholder {
+input::placeholder {
   color: #444444;
   opacity: 0.5;
 }
@@ -339,7 +341,7 @@ h2.subscribe {
   letter-spacing: -0.02em;
   color: #000000;
 }
-input {
+.address-box {
   color: #000000;
   background: #ebebeb;
   border: 2px solid #000000;
@@ -404,3 +406,4 @@ input {
   color: #000000;
   text-decoration: none;
 }
+
