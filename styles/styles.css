@@ -1,3 +1,5 @@
+/* ====== FONTS ====== */
+
 @font-face {
   font-family: Rubik;
   font-style: normal;
@@ -26,13 +28,16 @@
   font-weight: 800;
   src: url("fonts/Raleway-800.woff2") format("woff2");
   font-display: swap;
+
+  /* ====== GLOBAL ====== */
 }
 html {
   height: 100%;
 }
 body {
-  margin: 0;
   display: flex;
+  margin: 0;
+  padding: 0;
   flex-direction: column;
   font-family: Rubik, sans-serif;
   font-size: 18px;
@@ -51,8 +56,39 @@ body {
   z-index: -1;
   opacity: 0;
 }
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-/* Хедер */
+/* ====== BUTTONS ====== */
+
+.detail,
+.more-info,
+.mail-us,
+.button-submit,
+.catalog-item-button {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  background-color: #ffe17f;
+  background-size: 259px 8px;
+}
+
+/* ====== PAGE-HEADER ====== */
+
+.page-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
 .header-container {
   display: flex;
@@ -60,13 +96,13 @@ body {
   margin-top: 40px;
   color: #000000;
   background-color: #ffe17f;
-  width: 1160px;
-  height: 300px;
+  max-width: 1160px;
 }
-.navigation,
-.user-interface {
-  margin: 0;
-  padding: 0;
+
+.navigation-content {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffe17f;
 }
 .navigation {
   display: flex;
@@ -77,13 +113,18 @@ body {
   margin-right: 40px;
 }
 .user-interface {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding-top: 49px;
   width: 560px;
 }
-.navigation-list {
-  margin: 0;
-  padding: 0;
+.navigation-user-container {
+  padding-left: 49px;
+  padding-bottom: 44px;
+}
+.information-container {
+  padding-bottom: 53px;
 }
 .search {
   font-size: 16px;
@@ -130,7 +171,7 @@ body {
   background-color: #ffffff;
 }
 
-/* Слайдер */
+/* ====== SLAIDER ====== */
 
 .products-slider {
   display: flex;
@@ -154,23 +195,7 @@ body {
   line-height: 50px;
   color: #000000;
 }
-.detail,
-.more-info,
-.mail-us,
-.button-submit,
-.product-card-button {
-  font-family: Raleway, sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000000;
-  text-decoration: none;
-  background-color: #ffe17f;
-  background-size: 259px 8px;
-}
+
 .table-header {
   font-size: 36px;
   line-height: 30px;
@@ -182,7 +207,7 @@ body {
   line-height: 30px;
 }
 
-/* Популярные товары */
+/* ====== POPULAR PRODUCTS ====== */
 
 .popular-products-section {
   width: 1160px;
@@ -206,7 +231,7 @@ body {
   text-decoration: none;
 }
 
-/* Доставка-Гарантия-Кредит */
+/* ====== DELIVERY-WARRANTY-CREDIT ====== */
 
 .service-container {
   display: flex;
@@ -267,7 +292,7 @@ body {
   color: #000000;
 }
 
-/* Доставим редкий товар */
+/* ====== DELIVERY RARE ITEM ====== */
 
 .rare-item {
   display: flex;
@@ -293,7 +318,7 @@ body {
   padding: 0;
 }
 
-/* О компании */
+/* ====== ABOUT COMPANY ====== */
 
 .about-us-container {
   display: flex;
@@ -304,9 +329,6 @@ body {
   width: 1160px;
   margin-bottom: 87px;
 }
-
-/* О нас */
-
 .about-us {
   width: 560px;
   font-family: Raleway, sans-serif;
@@ -322,7 +344,7 @@ body {
   color: #000000;
 }
 
-/* Контакты */
+/* ====== CONTACTS ====== */
 
 .contacts-title {
   font-family: Raleway, sans-serif;
@@ -350,7 +372,7 @@ body {
   color: #444444;
 }
 
-/* Подпишитесь на нас */
+/* ====== SUBSCRIBE ====== */
 
 .subscribe-container {
   display: flex;
@@ -410,7 +432,7 @@ input::placeholder {
   margin-left: 171px;
 }
 
-/* Футер */
+/* ====== FOOTER ====== */
 
 .page-footer {
   min-width: 100%;
@@ -430,20 +452,24 @@ input::placeholder {
   margin-right: 114px;
 }
 .footer-customer-information {
-  width: 458px;
   padding-top: 133px;
   margin: 0;
 }
 .info {
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.social-media {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .footer-phone-container {
   margin-left: auto;
   padding-top: 133px;
   max-width: 293px;
 }
-
 .footer a {
   font-size: 16px;
   line-height: 19px;
@@ -478,14 +504,35 @@ input::placeholder {
   color: #ffffff;
 }
 
-/* Каталог */
+/* ====== CATALOG PAGE ====== */
 
-.main-inner {
-  margin: 0 auto;
+/* ====== CATALOG HEADER ====== */
+
+.catalog-page-header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
-/*Каталог хедер */
-
+.header-content {
+  width: 100%;
+  max-width: 1160px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 40px;
+  color: #000000;
+}
+.navigation-list {
+  display: flex;
+  flex-direction: row;
+}
+.info-list {
+  display: flex;
+  flex-direction: row;
+}
 .exit {
   font-size: 16px;
   line-height: 19px;
@@ -493,18 +540,22 @@ input::placeholder {
   opacity: 0.3;
 }
 .inner-header {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  width: 1160px;
+  background-color: #ffffff;
   margin-top: 37px;
   margin-bottom: 14px;
   padding-left: 60px;
-  width: 1160p;
 }
 .monopods-title {
   margin-top: 37px;
   margin-bottom: 14px;
   padding-left: 60px;
   margin: 0 auto;
-  width: 1160p;
+  width: 1160px;
 }
 .inner-header-title {
   font-family: Raleway, sans-serif;
@@ -513,9 +564,9 @@ input::placeholder {
   font-size: 50px;
   line-height: 50px;
   color: #000000;
-  }
+}
 
-/* Хлебные крошки */
+/* ====== BREADCRUMBS ====== */
 
 .breadcrumbs-link {
   font-size: 16px;
@@ -529,27 +580,83 @@ input::placeholder {
   display: flex;
   margin: 0 auto;
   margin-bottom: 49px;
-  padding-left: 60px;
   width: 1160px;
 }
 
-/* Фильтры каталога */
+/* ====== MAIN-CATALOG ====== */
 
-.catalog-products {
+.main-inner {
+  position: relative;
   display: flex;
-  width: 1160px;
+  justify-content: center;
+  width: 100%;
+}
+.main-inner .background {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.main-inner .background .background-left {
+  flex: 0 0 30%;
+  background: #ebebeb;
+}
+.main-inner .background .background-left .background-header {
+  height: 70px;
+  width: 100%;
+  background-color: #dcdcdc;
+}
+.main-inner .background .background-right {
+  flex: 0 0 70%;
+  background-color: white;
+}
+.main-inner .background .background-right .background-header {
+  height: 70px;
+  width: 100%;
+  background-color: #ebebeb;
+}
+.main-inner > .content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1160px;
 }
 
-/* Фильтры */
+/* ====== FILTERS ====== */
 
-.catalog-filter {
-  width: 468px;
+.main-inner > .content > .filters {
+  flex: 0 0 30%;
+  background-color: #ebebeb;
+}
+.main-inner > .content > .filters .filters-header {
+  background: #dcdcdc;
+}
+.main-inner > .content > .filters .filters-main {
+  width: 100%;
   background: #ebebeb;
+}
+
+.filter-body {
+  padding-top: 83px;
+  padding-left: 60px;
+  width: 200px;
+}
+.filters-header {
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 800;
   font-size: 16px;
   line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-left: 60px;
 }
 .filter-title {
-  width: 468px;
   background: #dcdcdc;
   font-size: 16px;
   line-height: 19px;
@@ -563,10 +670,6 @@ input::placeholder {
   line-height: 19px;
   letter-spacing: 0.2em;
   color: #000000;
-  margin: 0;
-  padding-left: 200px;
-  padding-top: 25px;
-  padding-bottom: 25px;
 }
 .catalog-filter-title {
   font-weight: bold;
@@ -575,18 +678,18 @@ input::placeholder {
   letter-spacing: -0.02em;
   color: #000000;
 }
-.filter-body {
-  padding-left: 200px;
-  margin: 0;
-  padding-top: 83px;
-  padding-right: 68px;
+
+/* ====== SORTING ====== */
+
+.main-inner > .content > .content {
+  flex: 0 0 70%;
 }
-
-/* Сортировка */
-
-.catalog-sorting-header {
-  width: 972px;
+.main-inner > .content > .content .content-header {
   background: #ebebeb;
+}
+.content-header {
+  display: flex;
+  flex-direction: row;
 }
 .sort {
   font-family: Raleway, sans-serif;
@@ -595,18 +698,34 @@ input::placeholder {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.2em;
+  text-transform: uppercase;
   color: #000000;
   padding-bottom: 25px;
   padding-top: 25px;
-  padding-left: 72px;
-  margin: 0;
+  padding-left: 75px;
 }
 
+/* ====== PRODUCT CARD ====== */
+.catalog-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 72px;
+  margin-top: 69px;
+  justify-content: space-between;
+  max-width: 825px;
+}
+
+.content-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .products-cards {
   margin-left: 72px;
   width: 760px;
 }
-.product-card-link {
+.catalog-item-link {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -614,13 +733,19 @@ input::placeholder {
   color: #000000;
   text-decoration: none;
 }
-.product-card-price {
+.catalog-item-price {
   font-size: 18px;
   line-height: 21px;
   text-align: right;
   color: #444444;
 }
+
+/* ====== SHOW MORE ====== */
+
 .show-more {
+  display: flex;
+  justify-content: center;
+  max-width: 760px;
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -629,6 +754,15 @@ input::placeholder {
   text-transform: uppercase;
   color: #000000;
 }
+
+/* ====== PAGINATION ====== */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  max-width: 760px;
+}
+
 .pagination-link {
   font-family: Raleway, sans-serif;
   font-style: normal;
