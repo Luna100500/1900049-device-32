@@ -18,26 +18,33 @@
       <section class="navigation-content">
         <h2 class="visually-hidden">Навигация по сайту</h2>
         <div class="navigation">
-          <a class="logo-device" href="#"><img class="logo" src="images/logo/Logo-black.svg"
+          <a class="logo-device" href="#"><img class="logo" src="images/logo/logo-black.svg"
               alt="Логотип онлайн-магазина Девайс." width="145" height="36"></a>
           <ul class="main-navigation reset-list">
             <li class="navigation-site">
-              <a class="search" href="#">Поиск по сайту</a>
+              <form class="search" action="htpps://echo.html-academy.ru//" method="post">
+                <div class="search-container">
+                <input class="search-box" type="text" id="search-query" name="search-field" placeholder="Поиск по сайту">
+                <button class="search-button" type="submit">
+                  <span class="search-button-text">Найти</span>
+                </button>
+              </div>
+              </form>
             </li>
             <li class="navigation-site">
-              <a class="catalogue" href="catalogue.html">Каталог товаров</a>
+              <a class="catalog" href="catalog.html">Каталог товаров</a>
             </li>
           </ul>
         </div>
-        <section class="user-interface">
+        <section class="user-nav-catalog">
           <div class="navigation-user-container">
             <h2 class="visually-hidden">Интерфейс пользователя</h2>
             <ul class="navigation-list reset-list">
               <li class="navigation-user">
-                <a class="enter" href="#">Коля Петухов</a>
+                <a class="user-link" href="#">Коля Петухов</a>
               </li>
               <li class="navigation-user">
-                <a class="visually-hidden" href="#">Выйти</a>
+                <a class="exit" href="#">Выйти</a>
               </li>
               <li class="navigation-user">
                 <a class="compare" href="#">Сравнить</a>
@@ -47,7 +54,7 @@
               </li>
             </ul>
           </div>
-          <div class="information-container">
+          <div class="site-nav">
             <h2 class="visually-hidden">Информация</h2>
             <ul class="info-list reset-list">
               <li class="information">
@@ -186,7 +193,9 @@
                 </li>
               </ul>
             </fieldset>
-            <button class="button-submit" type="submit">Показать</button>
+            <button class="yellow-button" type="submit">
+              Показать
+            </button>
           </div>
         </section>
       </div>
@@ -216,7 +225,7 @@
                   <h3 class="catalog-item-title">Любительская селфи-палка</h3>
                 </a>
                 <b class="catalog-item-price">500 ₽</b>
-                <a class="catalog-item-button button" href="#">Подробнее</a>
+                <a class="yellow-button button" href="#">Подробнее</a>
               </article>
             </li>
             <li class="catalog-item">
@@ -227,7 +236,7 @@
                   <h3 class="catalog-item-title">Профессиональная селфи-палка</h3>
                 </a>
                 <b class="catalog-item-price">1 500 ₽</b>
-                <a class="catalog-item-button button" href="#">Подробнее</a>
+                <a class="yellow-button button" href="#">Подробнее</a>
               </article>
             </li>
             <li class="catalog-item">
@@ -238,7 +247,7 @@
                   <h3 class="catalog-item-title">Непотопляемая селфи-палка</h3>
                 </a>
                 <b class="catalog-item-price">2 500 ₽</b>
-                <a class="catalog-item-button button" href="#">Подробнее</a>
+                <a class="yellow-button button" href="#">Подробнее</a>
               </article>
             </li>
             <li class="catalog-item">
@@ -249,7 +258,7 @@
                   <h3 class="catalog-item-title">Селфи-палка «Следуй за мной»</h3>
                 </a>
                 <b class="catalog-item-price">4 900 ₽</b>
-                <a class="catalog-item-button button" href="#">Подробнее</a>
+                <a class="yellow-button button" href="#">Подробнее</a>
               </article>
             </li>
           </ul>
@@ -304,16 +313,16 @@
     <div class="page-footer-container">
       <section class="logo-container">
         <h2 class="visually-hidden">Адрес онлайн-магазина Девайс.</h2>
-        <img class="logo" src="images/logo/logo-yellow.svg" alt="Логотип онлайн-магазина Девайс." width="145"
+        <img class="logo-footer" src="images/logo/logo-yellow.svg" alt="Логотип онлайн-магазина Девайс." width="145"
           height="36">
         <address class="footer-contacts-address">
           <p class="footer-adress">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
         </address>
       </section>
       <section class="footer-customer-information">
-        <div class="footer-info">
+
           <h2 class="visually-hidden">Информация</h2>
-          <ul class="info reset-list">
+          <ul class="footer-info reset-list">
             <li class="footer-information">
               <a class="footer-services" href="delivery.html">Доставка</a>
             </li>
@@ -324,28 +333,25 @@
               <a class="footer-services" href="contacts.html">Контакты</a>
             </li>
           </ul>
-        </div>
+
         <div class="social-media">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-social-media-list reset-list">
             <li class="footer-social-media-item">
-              <a class="button" href="htpps://facebook.com/htmlcademy/"></a>
-              <span class="visually-hidden">facebook</span>
+              <a aria-label="Переход на страницу facebook" class="button-fb" href="htpps://facebook.com/htmlcademy/"></a>
             </li>
             <li class="footer-social-media-item">
-              <a class="button" href="htpps://instagram.com/htmlcademy/"></a>
-              <span class="visually-hidden">instagram</span>
+              <a aria-label="Переход на страницу instagram" class="button-inst" href="htpps://instagram.com/htmlcademy/"></a>
             </li>
             <li class="footer-social-media-item">
-              <a class="button" href="htpps://twitter.com/htmlcademy/"></a>
-              <span class="visually-hidden">twitter</span>
+              <a aria-label="Переход на страницу twitter" class="button-tw" href="htpps://twitter.com/htmlcademy/"></a>
             </li>
           </ul>
         </div>
       </section>
       <section class="footer-phone-container">
         <h2 class="visually-hidden">Телефон онлайн-магазина Девайс.</h2>
-        <a class="footer-phone" href="tel:88128121212"> Тел.: +7 (812) 812-12-12</a>
+        <a aria-label="Позвонить в онлайн-магазин Девайс." class="footer-phone" href="tel:88128121212"> Тел.: +7 (812) 812-12-12</a>
         <a class="logo-html-academy" href="htpps://htmlcademy.ru/">
           <img class="made-in" src="images/logo/html-academy.svg" alt="Логотип HTML-Академия." width="115"
             height="34"></a>
