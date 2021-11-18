@@ -45,6 +45,8 @@
   height: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 100;
+  left: 0;
+  top: 0;
 }
 
 
@@ -73,7 +75,7 @@
   margin: 0px;
 }
 
-.cross {
+.modal .cross {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,39 +86,39 @@ border: none;
   background-color: transparent;
 }
 
-.cross:hover {
+.modal .cross:hover {
   opacity: 0.5;
 }
 
-.cross:focus {
+.modal .cross:focus {
   box-sizing: border-box;
   border: 5px solid #af4fff;
   border-radius: 50%;
   outline: none;
 }
 
-.cross:focus:hover {
+.modal .cross:focus:hover {
   border: none;
 }
 
-.cross:active {
+.modal .cross:active {
   opacity: 0.2;
 }
 
-.cross:after {
+.modal .cross:after {
   width: 26 px;
   height: 26 px;
   content: url("../images/cross.svg");
 }
 
-main {
+.modal main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 8px;
 }
 
-.form-item {
+.modal .form-item {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -126,21 +128,21 @@ main {
   margin-bottom: 10px;
 }
 
-.form-item header,
-.form-item main,
-.form-item footer {
+.modal .form-item header,
+.modal .form-item main,
+.modal .form-item footer {
   margin: 0px;
 }
 
-.form-item header {
+.modal .form-item header {
   flex: 0 0 34px;
 }
 
-.form-item main {
+.modal .form-item main {
   flex: 0 0 60px;
 }
 
-.form-item main input {
+.modal .form-item main input {
   font-family: "rubik", "verdana", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -156,18 +158,18 @@ main {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.form-item main input:focus {
+.modal .form-item main input:focus {
   outline: none;
 }
 
-.form-item.form-counter main {
+.modal .form-item.form-counter main {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   background-color: #f0f0f0;
 }
 
-.form-item.form-counter main > * {
+.modal .form-item.form-counter main > * {
   display: block;
   flex: 0 0 33%;
   width: 33%;
@@ -177,11 +179,11 @@ main {
   margin: 0 1px;
 }
 
-.form-item.form-counter main input {
+.modal .form-item.form-counter main input {
   text-align: center;
 }
 
-.form-item footer {
+.modal .form-item footer {
   font-family: "rubik", "verdana", sans-serif;
   font-style: normal;
   font-weight: normal;
