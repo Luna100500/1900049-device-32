@@ -1369,12 +1369,6 @@ button {
   border-bottom: 3px solid black;
 }
 
-.address-box:invalid {
-  color: black;
-  background: none;
-  border-bottom: 3px solid #ff3d3d;
-}
-
 .address-box:focus {
   background-color: #dcdcdc;
   outline: none;
@@ -2901,10 +2895,6 @@ border: 5px solid transparent;
 .modal-input:focus:hover {
   background-color: #ffffff;
   border: 3px solid #000000;
-  box-sizing: border-box;
-}
-.modal-input:invalid {
-  border: 3px solid #ff3d3d;
   box-sizing: border-box;
 }
 
