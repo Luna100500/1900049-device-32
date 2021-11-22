@@ -1295,8 +1295,6 @@ button {
   width: 1160px;
   margin: 0 auto;
   flex-direction: column;
-
-
 }
 
 .subscribe-text {
@@ -1431,6 +1429,10 @@ button {
   float: left;
   margin-right: 22px;
   margin-top: 3px;
+}
+
+.address-box-input-error:not(:placeholder-shown) {
+  border-bottom: 3px solid red;
 }
 
 /* ====== FOOTER ====== */
@@ -2747,6 +2749,9 @@ border: 5px solid transparent;
   border: none;
   background-color: #f0f0f0;
   color: rgba(0, 0, 0, 0.6);
+}
+.modal-input-error:not(:placeholder-shown) {
+  border: 3px solid red;
 }
 
 .modal .modal-input:focus {
